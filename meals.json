@@ -1,0 +1,112 @@
+[
+  {
+    "id": 1,
+    "name": "Avocado Toast with Poached Egg",
+    "category": "Breakfast",
+    "calories": 350,
+    "protein": 15,
+    "carbs": 30,
+    "fat": 20,
+    "allergens": ["Gluten", "Egg"],
+    "description": "Creamy avocado on sourdough bread topped with a perfectly poached egg."
+  },
+  {
+    "id": 2,
+    "name": "Grilled Salmon with Asparagus",
+    "category": "Lunch",
+    "calories": 450,
+    "protein": 35,
+    "carbs": 10,
+    "fat": 30,
+    "allergens": ["Fish"],
+    "description": "Fresh Atlantic salmon grilled with lemon and served with roasted asparagus."
+  },
+  {
+    "id": 3,
+    "name": "Quinoa Salad with Chickpeas",
+    "category": "Lunch",
+    "calories": 400,
+    "protein": 12,
+    "carbs": 60,
+    "fat": 15,
+    "allergens": [],
+    "description": "Refreshing quinoa salad with crunchy chickpeas, cucumbers, and a tahini dressing."
+  },
+  {
+    "id": 4,
+    "name": "Beef Stir-Fry with Broccoli",
+    "category": "Dinner",
+    "calories": 550,
+    "protein": 40,
+    "carbs": 20,
+    "fat": 35,
+    "allergens": ["Soy"],
+    "description": "Tender beef slices stir-fried with fresh broccoli in a ginger-soy sauce."
+  },
+  {
+    "id": 5,
+    "name": "Greek Yogurt with Mixed Berries",
+    "category": "Snack",
+    "calories": 200,
+    "protein": 18,
+    "carbs": 15,
+    "fat": 5,
+    "allergens": ["Dairy"],
+    "description": "Creamy Greek yogurt topped with fresh blueberries, strawberries, and a drizzle of honey."
+  },
+  {
+    "id": 6,
+    "name": "Chicken Pesto Pasta",
+    "category": "Dinner",
+    "calories": 600,
+    "protein": 30,
+    "carbs": 70,
+    "fat": 25,
+    "allergens": ["Gluten", "Dairy", "Nuts"],
+    "description": "Whole wheat pasta tossed with chicken breast and fresh basil pesto."
+  },
+  {
+    "id": 7,
+    "name": "Oatmeal with Almonds and Banana",
+    "category": "Breakfast",
+    "calories": 300,
+    "protein": 8,
+    "carbs": 50,
+    "fat": 10,
+    "allergens": ["Nuts"],
+    "description": "Hearty rolled oats cooked with almond milk, topped with sliced bananas and crushed almonds."
+  },
+  {
+    "id": 8,
+    "name": "Tofu Scramble with Spinach",
+    "category": "Breakfast",
+    "calories": 250,
+    "protein": 20,
+    "carbs": 5,
+    "fat": 15,
+    "allergens": ["Soy"],
+    "description": "Crumpled tofu sauteed with fresh spinach, turmeric, and nutritional yeast."
+  },
+  {
+    "id": 9,
+    "name": "Lentil Soup",
+    "category": "Lunch",
+    "calories": 320,
+    "protein": 18,
+    "carbs": 45,
+    "fat": 8,
+    "allergens": [],
+    "description": "Traditional red lentil soup with carrots, onions, and cumin."
+  },
+  {
+    "id": 10,
+    "name": "Steak with Sweet Potato",
+    "category": "Dinner",
+    "calories": 700,
+    "protein": 50,
+    "carbs": 40,
+    "fat": 35,
+    "allergens": [],
+    "description": "Pan-seared ribeye steak served with mashed sweet potato."
+  }
+]

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NutriSync | Personalized AI Meal Planner</title>
+    <meta name="description" content="AI-powered meal recommendations and nutrition tracking.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+
+    <div class="app-container">
+        <!-- Onboarding Screen -->
+        <section id="onboarding" class="view">
+            <header style="margin-bottom: 40px; text-align: center;">
+                <h1 style="font-size: 2.5rem; margin-bottom: 8px;">NutriSync</h1>
+                <p style="color: var(--text-dim);">Your AI Nutrition Partner</p>
+            </header>
+
+            <img src="hero.png" alt="Healthy Breakfast" style="width: 100%; border-radius: 16px; margin-bottom: 24px; box-shadow: var(--shadow); object-fit: cover; height: 180px;">
+
+            <div class="card">
+                <h2 style="margin-bottom: 24px;">Setup Your Profile</h2>
+                <form id="onboarding-form">
+                    <div class="form-group">
+                        <label for="age">Age</label>
+                        <input type="number" id="age" required min="18" max="100" placeholder="e.g. 25">
+                    </div>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+                        <div class="form-group">
+                            <label for="gender">Gender</label>
+                            <select id="gender" required>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="goal">Goal</label>
+                            <select id="goal" required>
+                                <option value="weight_loss">Weight Loss</option>
+                                <option value="maintenance">Maintenance</option>
+                                <option value="muscle_gain">Muscle Gain</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+                        <div class="form-group">
+                            <label for="height">Height (cm)</label>
+                            <input type="number" id="height" required placeholder="e.g. 175">
+                        </div>
+                        <div class="form-group">
+                            <label for="weight">Weight (kg)</label>
+                            <input type="number" id="weight" required placeholder="e.g. 70">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="activity">Activity Level</label>
+                        <select id="activity" required>
+                            <option value="sedentary">Sedentary (Office job)</option>
+                            <option value="light">Lightly Active</option>
+                            <option value="moderate">Moderate Exercise</option>
+                            <option value="active">Very Active</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="allergies">Allergies (comma separated)</label>
+                        <input type="text" id="allergies" placeholder="e.g. Dairy, Nuts">
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="margin-top: 12px;">
+                        Generate My Plan
+                    </button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Dashboard Screen -->
+        <section id="dashboard" class="view hidden">
+            <header class="header">
+                <div>
+                    <h2 id="welcome-text">Hi, Alex!</h2>
+                    <p style="font-size: 0.875rem; color: var(--text-dim);">Here's your plan for today</p>
+                </div>
+                <div class="profile-avatar">
+                    <span class="streak-badge">🔥 5</span>
+                </div>
+            </header>
+
+            <div class="card">
+                <div class="progress-circle">
+                    <svg width="160" height="160">
+                        <circle cx="80" cy="80" r="70" fill="transparent" stroke="var(--glass)" stroke-width="12"></circle>
+                        <circle id="progress-bar" cx="80" cy="80" r="70" fill="transparent" stroke="var(--primary)" stroke-width="12" stroke-dasharray="440" stroke-dashoffset="440" stroke-linecap="round" style="transition: stroke-dashoffset 1s ease-out;"></circle>
+                    </svg>
+                    <span class="value" id="cals-val">0</span>
+                    <span class="label">KCAL LEFT</span>
+                </div>
+                <div class="macros-grid">
+                    <div class="macro-pill">
+                        <span class="macro-val" id="protein-val">0g</span>
+                        <span class="macro-label">Protein</span>
+                    </div>
+                    <div class="macro-pill">
+                        <span class="macro-val" id="carbs-val">0g</span>
+                        <span class="macro-label">Carbs</span>
+                    </div>
+                    <div class="macro-pill">
+                        <span class="macro-val" id="fat-val">0g</span>
+                        <span class="macro-label">Fat</span>
+                    </div>
+                </div>
+            </div>
+
+            <h3 style="margin-bottom: 16px;">Your Meal Plan</h3>
+            <div id="meal-list">
+                <!-- Meal cards injected here -->
+            </div>
+        </section>
+
+        <!-- Navigation Bar -->
+        <nav id="navbar" class="hidden" style="position: fixed; bottom: 0; left: 0; width: 100%; padding: 20px; background: rgba(15, 23, 42, 0.8); backdrop-filter: blur(20px); border-top: 1px solid var(--border); display: flex; justify-content: space-around; z-index: 100;">
+            <button class="nav-btn" style="background:none; border:none; color: var(--primary); font-size: 1.5rem;">🏠</button>
+            <button class="nav-btn" style="background:none; border:none; color: var(--text-dim); font-size: 1.5rem;">📈</button>
+            <button class="nav-btn" style="background:none; border:none; color: var(--text-dim); font-size: 1.5rem;">⚙️</button>
+        </nav>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
