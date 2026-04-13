@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:8000";
+const API_URL = "";
 
 // DOM Elements
 const onboardingForm = document.getElementById('onboarding-form');
